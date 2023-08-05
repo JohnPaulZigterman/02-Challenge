@@ -1,22 +1,29 @@
+/*The Universal selector applies to all HTML elements*/
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+/*Element selectors apply to any element of that type*/
+
+/*The body selector applies to the entire body element of the page, which contains the other visible elements*/
 body {
     background-color: #d9dcd6;
 }
 
+/*The a selector applies to all hyperlinks*/
 a {
     color: #ffffff;
     text-decoration: none;
 }
 
+/*The p selector applies to all paragraphs of plain text*/
 p {
     font-size: 16px;
 }
 
+/*These attributes are applied to the entire header element*/
 header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -25,15 +32,13 @@ header {
     list-style-type: none;
 }
 
+    /*These attributes are only applied to h1 elements within the header element*/
     header h1 {
         display: inline-block;
         font-size: 48px;
     }
 
-    header h1 .seo {
-        color: #d9dcd6;
-    }
-
+    /*These attributes are only applied to nav elements within the header element*/
     header nav {
         padding-top: 15px;
         margin-right: 20px;
@@ -42,17 +47,20 @@ header {
         font-size: 20px;
     }
 
+            /*These attributes are only applied to list items in unordered lists in the header nav element*/
             header nav ul li {
                 display: inline-block;
                 margin-left: 25px;
             }
 
+/*These attributes are applied to the entire main element*/
 main {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
 
+    /*These attributes are applied only to section elements within the main element*/
     main section {
         margin-bottom: 20px;
         padding: 50px;
@@ -62,15 +70,18 @@ main {
         color: #ffffff;
     }
 
+        /*These are applied to images within the main section elements*/
         main section img {
             max-height: 200px;
         }
 
+        /*These are applied to h2 elements within the main section elements*/
         main section h2 {
             margin-bottom: 20px;
             font-size: 36px;
         }
 
+/*These are applied to the entire aside element*/
 aside {
     margin-right: 20px;
     padding: 20px;
@@ -82,22 +93,26 @@ aside {
     background-color: #2589bd;
 }
 
+    /*These are applied to section elements within the aside element*/
     aside section {
         margin-bottom: 32px;
         color: #ffffff;
     }
 
+        /*These are applied to h3 elements within the aside section elements*/
         aside section h3 {
             margin-bottom: 10px;
             text-align: center;
         }
 
+        /*These are applied to images within the aside section elements*/
         aside section img {
             display: block;
             margin: 10px auto;
             max-width: 150px;
         }
 
+/*These are applied to the entire footer element*/
 footer {
     padding: 30px;
     clear: both;
@@ -105,20 +120,26 @@ footer {
     text-align: center;
 }
 
+    /*These are applied to h2 elements within the footer element only*/
     footer h2 {
         font-size: 20px;
     }
 
+/*Class selectors apply to elements with that particular defined class*/
+/*This class selector causes the associated image to float to the left with a 25px margin*/
 .float-left {
     float: left;
     margin-right: 25px;
 }
 
+/*This class selector causes the associated image to float to the right with a 25px margin*/
 .float-right {
     float: right;
     margin-left: 25px;
 }
 
+/*ID selectors apply only to one particular element with that unique ID*/
+/*This particular ID selector applies to the hero image*/
 #hero {
     height: 800px;
     width: 100%;
@@ -126,4 +147,9 @@ footer {
     background-image: url("../images/digital-marketing-meeting.jpg");
     background-size: cover;
     background-position: center;
+}
+
+/*This particular ID selector turns a three letter span in the header h1 element a slightly different color*/
+#seo {
+    color: #d9dcd6;
 }
